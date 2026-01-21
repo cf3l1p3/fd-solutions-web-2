@@ -30,9 +30,9 @@ export const translations = {
             title: "Our Expertise",
             subtitle: "Focused solutions to drive your business forward.",
             items: {
-                web: { title: "Web Development", desc: "Custom, responsive, and high-performance websites built with modern technologies." },
-                consulting: { title: "IT Consulting", desc: "Strategic technology planning to align IT with your business goals." },
-                recruitment: { title: "IT Staffing & Recruitment", desc: "Connecting you with top-tier tech talent to build your dream team." }
+                web: { title: "Web Development", desc: "Custom, responsive, and high-performance websites built with modern technologies.", tags: ['React', 'Node.js', 'Next.js', 'Java', '.NET', 'Python'] },
+                consulting: { title: "IT Consulting", desc: "Strategic technology planning to align IT with your business goals.", tags: ['Strategy', 'Architecture', 'Audit'] },
+                recruitment: { title: "IT Staffing & Recruitment", desc: "Connecting you with top-tier tech talent to build your dream team.", tags: ['Talent', 'Sourcing', 'Screening'] }
             }
         },
         ctaSection: {
@@ -129,9 +129,9 @@ export const translations = {
             title: "Nuestra Experiencia",
             subtitle: "Soluciones enfocadas para impulsar tu negocio.",
             items: {
-                web: { title: "Desarrollo Web", desc: "Sitios web personalizados, responsivos y de alto rendimiento construidos con tecnologías modernas." },
-                consulting: { title: "Consultoría TI", desc: "Planificación tecnológica estratégica para alinear TI con tus objetivos de negocio." },
-                recruitment: { title: "Reclutamiento TI", desc: "Conectándote con el mejor talento tecnológico para construir tu equipo ideal." }
+                web: { title: "Desarrollo Web", desc: "Sitios web personalizados, responsivos y de alto rendimiento construidos con tecnologías modernas.", tags: ['React', 'Node.js', 'Next.js', 'Java', '.NET', 'Python'] },
+                consulting: { title: "Consultoría TI", desc: "Planificación tecnológica estratégica para alinear TI con tus objetivos de negocio.", tags: ['Estrategia', 'Arquitectura', 'Auditoría'] },
+                recruitment: { title: "Reclutamiento TI", desc: "Conectándote con el mejor talento tecnológico para construir tu equipo ideal.", tags: ['Talento', 'Búsqueda', 'Selección'] }
             }
         },
         ctaSection: {

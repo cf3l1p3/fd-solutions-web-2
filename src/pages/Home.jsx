@@ -28,19 +28,19 @@ const Home = () => {
             icon: <Code size={32} />,
             title: t('services.items.web.title'),
             description: t('services.items.web.desc'),
-            tech: ['React', 'Node.js', 'Next.js']
+            tech: t('services.items.web.tags')
         },
         {
             icon: <Terminal size={32} />,
             title: t('services.items.consulting.title'),
             description: t('services.items.consulting.desc'),
-            tech: ['Strategy', 'Architecture', 'Audit']
+            tech: t('services.items.consulting.tags')
         },
         {
             icon: <Users size={32} />,
             title: t('services.items.recruitment.title'),
             description: t('services.items.recruitment.desc'),
-            tech: ['Talent', 'Sourcing', 'Screening']
+            tech: t('services.items.recruitment.tags')
         }
     ];
 
@@ -170,11 +170,16 @@ const Home = () => {
                             <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
                                 {t('ctaSection.description')}
                             </p>
-                            <Link to="/contact">
-                                <Button size="lg" className="bg-primary hover:bg-primary-hover text-white border-none shadow-lg shadow-primary/25">
+                            <div className="relative z-10">
+                                <Button
+                                    as={Link}
+                                    to="/contact"
+                                    size="lg"
+                                    className="bg-primary hover:bg-primary-hover text-white border-none shadow-lg shadow-primary/25"
+                                >
                                     {t('ctaSection.button')}
                                 </Button>
-                            </Link>
+                            </div>
                         </motion.div>
                     </div>
                 </div>

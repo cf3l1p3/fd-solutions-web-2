@@ -31,22 +31,23 @@ const Navbar = () => {
             e.preventDefault();
             const [pagePath, hash] = path.split('#');
 
+            const scrollToElement = () => {
+                const element = document.getElementById(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                    // Update URL without jumping
+                    window.history.pushState(null, '', `#${hash}`);
+                }
+            };
+
             // If we are not on the page, navigate first
             if (location.pathname !== pagePath) {
                 await navigate(pagePath);
                 // Wait for navigation to complete then scroll
-                setTimeout(() => {
-                    const element = document.getElementById(hash);
-                    if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }, 100);
+                setTimeout(scrollToElement, 100);
             } else {
                 // We are already on the page, just scroll
-                const element = document.getElementById(hash);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
+                scrollToElement();
             }
         }
     };

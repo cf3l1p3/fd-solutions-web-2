@@ -1,11 +1,11 @@
 import { forwardRef } from 'react';
-import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 const Button = forwardRef(({
     className,
     variant = 'primary',
     size = 'md',
+    as: Component = 'button',
     children,
     ...props
 }, ref) => {
@@ -23,10 +23,10 @@ const Button = forwardRef(({
     };
 
     return (
-        <button
+        <Component
             ref={ref}
             className={twMerge(
-                'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none',
+                'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none cursor-pointer',
                 variants[variant],
                 sizes[size],
                 className
@@ -34,7 +34,7 @@ const Button = forwardRef(({
             {...props}
         >
             {children}
-        </button>
+        </Component>
     );
 });
 
