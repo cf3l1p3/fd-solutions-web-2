@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import ScrollToTop from './components/ScrollToTop';
 // Pages will be imported here later
@@ -19,6 +19,8 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="clients" element={<Clients />} />
             <Route path="contact" element={<Contact />} />
+            {/* Redirect any other path to home */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
       </Router>

@@ -8,8 +8,11 @@ export const translations = {
             contact: "Contact Us"
         },
         clients: {
-            title: "Something Amazing is Coming",
-            description: "We are currently curating a showcase of our success stories. Check back soon to see how we help businesses thrive.",
+            title: "Our Trusted Partners",
+            description: "We work with leading organizations to deliver impactful digital solutions.",
+            mercadoPublico: "Transactional platform for public procurement in Chile.",
+            joinUs: "Join Our Network",
+            joinUsDesc: "Ready to transform your business? Let's build something great together.",
             backHome: "Back to Home"
         },
         validation: {
@@ -107,8 +110,11 @@ export const translations = {
             contact: "Contáctanos"
         },
         clients: {
-            title: "Algo Increíble Está por Llegar",
-            description: "Estamos preparando una selección de nuestras historias de éxito. Vuelve pronto para ver cómo ayudamos a las empresas a prosperar.",
+            title: "Nuestros Aliados Estratégicos",
+            description: "Trabajamos con organizaciones líderes para entregar soluciones digitales de alto impacto.",
+            mercadoPublico: "Plataforma transaccional de compras públicas en Chile.",
+            joinUs: "Únete a Nuestra Red",
+            joinUsDesc: "¿Listo para transformar tu negocio? Construyamos algo grandioso juntos.",
             backHome: "Volver al Inicio"
         },
         validation: {
