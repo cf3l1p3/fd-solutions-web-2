@@ -1,4 +1,4 @@
-import { Terminal, Github, Linkedin, Mail } from 'lucide-react';
+import { Terminal, Mail, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -22,14 +22,19 @@ const Footer = () => {
                             {t('footer.desc')}
                         </p>
                         <div className="flex gap-4">
+                            {/* Hidden LinkedIn and GitHub as requested
                             <a href="#" className="p-2 bg-slate-700 rounded-full hover:bg-primary transition-colors">
                                 <Linkedin size={18} />
                             </a>
                             <a href="#" className="p-2 bg-slate-700 rounded-full hover:bg-primary transition-colors">
                                 <Github size={18} />
                             </a>
-                            <a href="#" className="p-2 bg-slate-700 rounded-full hover:bg-primary transition-colors">
+                            */}
+                            <a href="mailto:contacto@fdsolutions.cl" className="p-2 bg-slate-700 rounded-full hover:bg-primary transition-colors" title="Email Us">
                                 <Mail size={18} />
+                            </a>
+                            <a href="https://wa.me/56985334038" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-700 rounded-full hover:bg-primary transition-colors" title="WhatsApp">
+                                <MessageCircle size={18} />
                             </a>
                         </div>
                     </div>

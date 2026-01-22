@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Code, Shield, Cloud, Lock, BarChart, Terminal, Users, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/ui/Button'; // Assuming Button is in ui folder
+import serviceWeb from '../assets/images/service-web.png';
+import serviceConsulting from '../assets/images/service-consulting.png';
+import serviceRecruitment from '../assets/images/service-recruitment.png';
 import { useLanguage } from '../context/LanguageContext';
 
 const Home = () => {
@@ -22,22 +25,24 @@ const Home = () => {
         }
     };
 
+
+
     // Services map based on the new 3 key services
     const services = [
         {
-            icon: <Code size={32} />,
+            image: serviceWeb,
             title: t('services.items.web.title'),
             description: t('services.items.web.desc'),
             tech: t('services.items.web.tags')
         },
         {
-            icon: <Terminal size={32} />,
+            image: serviceConsulting,
             title: t('services.items.consulting.title'),
             description: t('services.items.consulting.desc'),
             tech: t('services.items.consulting.tags')
         },
         {
-            icon: <Users size={32} />,
+            image: serviceRecruitment,
             title: t('services.items.recruitment.title'),
             description: t('services.items.recruitment.desc'),
             tech: t('services.items.recruitment.tags')
@@ -134,8 +139,12 @@ const Home = () => {
                             >
                                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500"></div>
 
-                                <div className="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10 border border-slate-50">
-                                    {service.icon}
+                                <div className="w-full h-48 mb-6 rounded-xl overflow-hidden shadow-md relative z-10">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                    />
                                 </div>
                                 <h3 className="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
                                 <p className="text-slate-600 mb-6 leading-relaxed">

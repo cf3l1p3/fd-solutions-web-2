@@ -26,9 +26,10 @@ const Navbar = () => {
     }, [location]);
 
     const handleNavClick = async (e, path) => {
+        e.preventDefault(); // Take full control of navigation
+
         // If it's a hash link (e.g., /#services)
         if (path.includes('#')) {
-            e.preventDefault();
             const [pagePath, hash] = path.split('#');
 
             const scrollToElement = () => {
@@ -49,7 +50,13 @@ const Navbar = () => {
                 // We are already on the page, just scroll
                 scrollToElement();
             }
+        } else {
+            // Standard link: Scroll to top AND navigate
+            window.scrollTo(0, 0);
+            navigate(path);
         }
+
+        setIsOpen(false); // Close mobile menu explicitly
     };
 
     const navLinks = [
